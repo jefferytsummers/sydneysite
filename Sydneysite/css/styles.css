@@ -1,0 +1,82 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #5d6574;
+    height: 800px;
+}
+
+nav {
+    background-color: #22274c;
+    width: 100%;
+}
+nav a {
+    font-size: 1rem;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    color: #f1a56b;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    /*----------------------------------------
+      Global Styles
+      ----------------------------------------*/
+    html {
+      font-size: 0.75rem;
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
+        margin: 0;
+    }
+    header {
+        padding-top: 50px;
+        position: relative;
+    }
+    .content-wrap {
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    /*----------------------------------------
+      Header and footer
+      ----------------------------------------*/
+    .profile-img {
+        width: 200px;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Navbar
+      ----------------------------------------*/
+    nav {
+        font-family: 'Abril Fatface', cursive;
+        top: 0;
+        font-size: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        margin: 0 auto;
+    }
+    nav a {
+        font-size: 0.75rem;
+        text-decoration: none;
+        padding-top: 10px;
+    }
+    nav a:nth-child(3) {
+        padding-top: 4px;
+    }
+}
