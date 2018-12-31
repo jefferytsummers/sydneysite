@@ -1,2 +1,0 @@
-# sydneysite
-Website for Sydney
